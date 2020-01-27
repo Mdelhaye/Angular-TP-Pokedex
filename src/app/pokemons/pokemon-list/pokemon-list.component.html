@@ -1,0 +1,8 @@
+<h2>Mes pokémons</h2>
+
+<mat-list infinite-scroll (scrolled)="onScroll()" *ngIf="pokemons">
+  <mat-list-item *ngFor="let pokemon of pokemons" routerLink="/pokemons/{{pokemon.id}}" class="menuPokemon">
+    <img matListAvatar src="../assets/img/sprites/{{ pokemon.id }}.png" alt="">
+    {{ pokemon.id }}. {{ pokemon.name }}
+  </mat-list-item>
+</mat-list>
