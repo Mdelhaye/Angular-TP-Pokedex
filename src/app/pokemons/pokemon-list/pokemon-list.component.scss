@@ -1,0 +1,14 @@
+.liste {
+  width: 300px;
+  height: calc(100% - 8px);
+  overflow: auto;
+}
+
+.liste mat-list-item {
+  cursor: pointer;
+}
+
+.inputButton {
+  margin-left: 15px;
+}
+

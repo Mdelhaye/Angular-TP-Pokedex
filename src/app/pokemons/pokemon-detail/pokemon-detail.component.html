@@ -1,0 +1,56 @@
+<mat-card *ngIf="pokemon" class="card">
+
+  <!-- <div class="retour" (click)="goBack()">
+    <mat-icon>keyboard_backspace</mat-icon>
+    <span>Retour</span>
+  </div> -->
+
+  <mat-grid-list cols="2" rowHeight="125px">
+
+    <mat-grid-tile rowspan="2">
+      <mat-list>
+        <img mat-card-lg-image src="../assets/img/official-artwork/{{ pokemon.id }}.png">
+        <mat-list-item style="align-content: center">
+          <div class="idPokemon">No. {{ pokemon.id | number: '3.0' }}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspan="2">
+      <mat-list>
+
+        <mat-list-item>
+          {{ pokemon.name}}&nbsp;&nbsp;
+          <audio #playSong id="criPokemon" src="../assets/audio/{{pokemon.id}}.mp3" autoplay>Votre navigateur ne supporte pas
+            l'audio
+          </audio>
+          <mat-icon class="audio" (click)="startMusic(playSong)">play_circle_outline</mat-icon>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-chip-list>
+            <mat-chip *ngFor="let type of pokemon.types">
+              {{type}}
+            </mat-chip>
+          </mat-chip-list>
+        </mat-list-item>
+
+        <mat-list-item>
+          Taille = {{ pokemon.height.toFixed(1) }} m
+        </mat-list-item>
+        <mat-list-item>
+          Poid = {{ pokemon.weight.toFixed(1) }} kg
+        </mat-list-item>
+
+      </mat-list>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2">
+      {{pokemon.description }}
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</mat-card>
+
+

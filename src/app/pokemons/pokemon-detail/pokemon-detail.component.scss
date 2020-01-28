@@ -1,0 +1,22 @@
+.card {
+  position: fixed;
+  left: 39%;
+  transform: translate(-50% 0px);
+  width: 400px;
+
+}
+
+.idPokemon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+div.retour span {
+  position: relative;
+  top: -6px;
+}
+
+.retour, .audio {
+  cursor: pointer;
+}

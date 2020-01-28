@@ -1,0 +1,15 @@
+<mat-list class="menu">
+
+  <mat-list-item *ngIf="!islogin">
+    <button mat-raised-button color="primary" (click)="login()">Connexion</button>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="islogin">
+    <button mat-raised-button color="primary" (click)="logout()">Déconnexion</button>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="islogin">
+    <button mat-raised-button color="primary" (click)="goToTeam()">Gérer ma team</button>
+  </mat-list-item>
+
+</mat-list>

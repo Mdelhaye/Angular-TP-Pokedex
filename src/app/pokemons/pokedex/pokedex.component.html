@@ -1,0 +1,12 @@
+<mat-sidenav-container class="container">
+
+  <mat-sidenav mode="side" opened [fixedInViewport]="true">
+    <app-pokemon-list (pokemonSelectedId)="onPokemonSelectedId($event)"></app-pokemon-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-pokemon-detail [idPokemonRecu]="idPokemon"></app-pokemon-detail>
+    <app-option></app-option>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
